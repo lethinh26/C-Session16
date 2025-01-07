@@ -14,10 +14,10 @@ int main() {
 int sortArray(int *array) {
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4 - i; j++) {
-            if (array[j] > array[j+1]) {
-                int temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
+            if (*(array+j) > *(array+j+1)) {
+                int temp = *(array+j);
+                *(array+j) =  *(array+j+1);
+                *(array+j+1) = temp;
             }
         }
     }
